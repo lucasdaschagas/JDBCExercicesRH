@@ -1,0 +1,16 @@
+package com.JavaExercicesForLinkedRH.LinkedCrud.entities;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+
+@NoArgsConstructor
+@Getter
+public class Class {
+    private int id;
+    private Date start;
+    private Date ending;
+    private String locality;
+
+}
