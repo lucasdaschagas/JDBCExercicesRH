@@ -1,9 +1,5 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.repository;
 
-<<<<<<< HEAD
-public interface CourseRepository{
-}
-=======
 import com.JavaExercicesForLinkedRH.LinkedCrud.entities.Course;
 
 import java.util.List;
@@ -21,4 +17,3 @@ public interface CourseRepository {
     void delete(int id);
 }
 
->>>>>>> test

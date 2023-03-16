@@ -1,8 +1,4 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.service;
-
-<<<<<<< HEAD
-public class ClassService {
-=======
 import com.JavaExercicesForLinkedRH.LinkedCrud.repository.ClassRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,5 +39,4 @@ public class ClassService implements ClassRepository {
     public void delete(int id) {
 
     }
->>>>>>> test
 }

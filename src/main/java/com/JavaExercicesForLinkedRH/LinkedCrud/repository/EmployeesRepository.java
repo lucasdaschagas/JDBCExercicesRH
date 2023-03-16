@@ -1,9 +1,5 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.repository;
 
-<<<<<<< HEAD
-public interface EmployeesRepository {
-}
-=======
 import com.JavaExercicesForLinkedRH.LinkedCrud.entities.Employees;
 
 import java.util.List;
@@ -17,4 +13,3 @@ public interface EmployeesRepository {
      void delete(int id);
 }
 
->>>>>>> test

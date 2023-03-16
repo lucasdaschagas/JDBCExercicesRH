@@ -1,8 +1,4 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.service;
-
-<<<<<<< HEAD
-public class CourseService {
-=======
 import com.JavaExercicesForLinkedRH.LinkedCrud.entities.Course;
 import com.JavaExercicesForLinkedRH.LinkedCrud.repository.CourseRepository;
 import org.slf4j.Logger;
@@ -43,5 +39,4 @@ public class CourseService implements CourseRepository {
     public void delete(int id) {
 
     }
->>>>>>> test
 }

@@ -1,8 +1,5 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.service;
 
-<<<<<<< HEAD
-public class EmployeesService {
-=======
 import com.JavaExercicesForLinkedRH.LinkedCrud.entities.Employees;
 import com.JavaExercicesForLinkedRH.LinkedCrud.repository.EmployeesRepository;
 import org.slf4j.Logger;
@@ -44,5 +41,4 @@ public class EmployeesService implements EmployeesRepository {
     public void delete(int id) {
 
     }
->>>>>>> test
 }
