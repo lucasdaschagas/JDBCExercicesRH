@@ -1,10 +1,12 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.entities;
 
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -16,4 +18,6 @@ public class Employees {
     private String role;
     private Date admission;
     private int status ;
+    private List<EmployersClass> employersGroup = new ArrayList<>();
+
 }
