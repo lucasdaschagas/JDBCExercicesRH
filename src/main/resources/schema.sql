@@ -22,12 +22,5 @@ Id int primary key NOT NULL AUTO_INCREMENT,
 Start date not null
 Ending date not null
 Locality varchar(200)
-Course_Id int
-<<<<<<< HEAD:src/main/resources/schema.sql
-  PRIMARY KEY (Id)
-  FOREIGN KEY (Course_Id) REFERENCES Course(Id)
-=======
-
->>>>>>> test:src/main/resources/Schema.sql
  );
 
