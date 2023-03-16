@@ -18,6 +18,9 @@ public class Employees {
     private String role;
     private Date admission;
     private int status ;
+<<<<<<< HEAD
     private List<EmployersClass> employersGroup = new ArrayList<>();
+=======
+>>>>>>> test
 
 }
