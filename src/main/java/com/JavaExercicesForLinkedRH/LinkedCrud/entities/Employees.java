@@ -18,6 +18,5 @@ public class Employees {
     private String role;
     private Date admission;
     private int status ;
-    private List<EmployersClass> employersGroup = new ArrayList<>();
 
 }

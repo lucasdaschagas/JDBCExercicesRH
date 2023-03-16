@@ -23,7 +23,6 @@ Start date not null
 Ending date not null
 Locality varchar(200)
 Course_Id int
-  PRIMARY KEY (Id)
-  FOREIGN KEY (Course_Id) REFERENCES Course(Id)
+
  );
 
