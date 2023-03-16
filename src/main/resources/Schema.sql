@@ -18,8 +18,8 @@ Admission date not null,
 Status bit not null);
 
 CREATE TABLE Class(
-Id int NOT NULL AUTO_INCREMENT,
+Id int primary key NOT NULL AUTO_INCREMENT,
 Start date not null
 Ending date not null
 Locality varchar(200)
-Curso int  );
+Cou int FOREIGN KEY (Curso) REFERENCES Persons(PersonID) );
