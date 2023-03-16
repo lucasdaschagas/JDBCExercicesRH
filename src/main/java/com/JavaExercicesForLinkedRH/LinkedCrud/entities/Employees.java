@@ -19,5 +19,13 @@ public class Employees {
     private Date admission;
     private int status ;
 
-
+    public Employees(int id, String name, String cpf, Date birthday, String role, Date admission, int status) {
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.birthday = birthday;
+        this.role = role;
+        this.admission = admission;
+        this.status = status;
+    }
 }
