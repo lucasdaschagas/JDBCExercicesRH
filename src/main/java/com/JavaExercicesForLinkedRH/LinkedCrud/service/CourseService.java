@@ -1,9 +1,12 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.service;
 import com.JavaExercicesForLinkedRH.LinkedCrud.entities.Course;
+import com.JavaExercicesForLinkedRH.LinkedCrud.exceptions.CourseAlreadyExistsException;
 import com.JavaExercicesForLinkedRH.LinkedCrud.repository.CourseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -37,21 +40,42 @@ public class CourseService implements CourseRepository {
 
     @Override
     public void create(Course course) {
-        String sql = ("INSERT INTO Course (Name, Description, Duration) VALUES (?,?,?)");
-       int insert = jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getDuration());
-       if(insert == 1){
-           logger.info("New Course created" + course.getName());
-       }
+        try {
+            String sql = ("INSERT INTO Course (Name, Description, Duration) VALUES (?,?,?)");
+            int insert = jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getDuration());
+            if (insert == 1) {
+                logger.info("New Course created " + course.getName());
+            }
 
+        }catch(DuplicateKeyException e){
+            e.getMessage();
+            throw new CourseAlreadyExistsException(course);
+
+
+        }
     }
 
     @Override
-    public Optional<Course> getCourses(int id) {
-        return Optional.empty();
+    public Optional<Course> getCoursesById(int id) {
+        String sql = ("SELECT * FROM Course WHERE Course_Id = ? ");
+        Course course = null;
+        try {
+            course = jdbcTemplate.queryForObject(sql, new Object[]{id} , rowMapper );
+            logger.info("Course: " + course.getName());
+
+        }catch (DataAccessException e){
+            logger.info("Course not found " + id);
+            e.getMessage();
+            e.printStackTrace();
+        }
+
+         return Optional.ofNullable(course);
     }
 
     @Override
     public void update(Course course, int id) {
+
+
 
     }
 

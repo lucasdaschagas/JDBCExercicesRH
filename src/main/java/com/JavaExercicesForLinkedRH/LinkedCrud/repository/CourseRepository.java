@@ -12,7 +12,7 @@ public interface CourseRepository {
 
     void create(Course course);
 
-    Optional<Course> getCourses(int id);
+    Optional<Course> getCoursesById(int id);
 
     void update(Course course, int id);
 
