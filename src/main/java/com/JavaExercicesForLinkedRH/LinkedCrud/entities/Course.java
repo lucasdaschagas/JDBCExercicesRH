@@ -14,7 +14,7 @@ public class Course {
     private String description;
     private int Duration;
 
-    public Course(int id, String name, String description, int duration) {
+    public Course(Integer id, String name, String description, int duration) {
         this.courseId = id;
         this.name = name;
         this.description = description;

@@ -3,6 +3,7 @@ package com.JavaExercicesForLinkedRH.LinkedCrud.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,8 +11,9 @@ import java.util.List;
 
 @NoArgsConstructor
 @Getter
+@Setter
 public class Employees {
-    private int id;
+    private int emplooyeesId;
     private String name;
     private String cpf;
     private Date birthday;
@@ -20,7 +22,7 @@ public class Employees {
     private int status ;
 
     public Employees(int id, String name, String cpf, Date birthday, String role, Date admission, int status) {
-        this.id = id;
+        this.emplooyeesId = id;
         this.name = name;
         this.cpf = cpf;
         this.birthday = birthday;

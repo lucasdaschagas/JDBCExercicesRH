@@ -1,8 +1,11 @@
 package com.JavaExercicesForLinkedRH.LinkedCrud.repository;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface ClassRepository<Class> {
      List<Class> classes();
 

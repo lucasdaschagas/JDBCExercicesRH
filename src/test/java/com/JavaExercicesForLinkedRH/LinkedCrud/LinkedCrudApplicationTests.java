@@ -8,6 +8,7 @@ class LinkedCrudApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
