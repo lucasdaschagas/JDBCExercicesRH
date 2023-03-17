@@ -74,9 +74,18 @@ public class CourseService implements CourseRepository {
 
     @Override
     public void update(Course course, int id) {
+        try {
+            String sql = ("UPDATE Course SET Name = ?, Description = ?, Duration = ? WHERE Course_Id = ?");
+            int update = jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getDuration());
 
+            if (update == 1) {
+                logger.info("Course updated: " + course.getName());
+            }
 
-
+        } catch (IllegalStateException e) {
+            e.getMessage();
+            throw new CourseAlreadyExistsException(course);
+        }
     }
 
     @Override

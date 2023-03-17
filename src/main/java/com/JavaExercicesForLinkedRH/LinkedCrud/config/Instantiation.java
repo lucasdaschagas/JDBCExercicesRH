@@ -16,7 +16,7 @@ public class Instantiation implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //        Course odonto = new Course("CursoA", "Cursob", 90 );
 //        repository.create(odonto);
-        repository.getCoursesById(1);
+//        repository.getCoursesById(1);
 
 
     }

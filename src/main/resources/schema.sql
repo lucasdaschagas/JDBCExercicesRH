@@ -1,5 +1,3 @@
-use javaexercices;
-
 CREATE TABLE Course(
 Course_Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Name varchar(100) not null unique,
