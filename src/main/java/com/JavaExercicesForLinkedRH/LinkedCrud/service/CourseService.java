@@ -90,6 +90,12 @@ public class CourseService implements CourseRepository {
 
     @Override
     public void delete(int id) {
+        String sql = ("DELETE FROM Course WHERE Course_Id = ?");
+        Object[] course = new Object[] {id};
+        jdbcTemplate.update(sql, course);
+
+
+
 
     }
 }
